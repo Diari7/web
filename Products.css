@@ -1,7 +1,5 @@
 body{
-    background: url(Pictures/Mounting.jpg)no-repeat;
-    background-size: cover;
-    font-family: Arial;
+    background-color: rgb(71, 67, 67);
     color: white;
 }
 
@@ -45,8 +43,17 @@ ul li:hover ul li {
 }
 
 
+.container{
+    
+	
+	
+	
+	
+	
+    
+
+}
 
 
 
 
-  
