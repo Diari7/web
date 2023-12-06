@@ -1,0 +1,46 @@
+body{
+    background: url(Pictures/21761.jpg);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #411d1d;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+
+}
+
+.team{
+
+    color: white;
+    font-size: 30px;
+    text-align: left;
+}
+
+.content{
+
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+
+
+}
+ 
+
+ .story p {
+    line-height: 1.5;
+ }
+
+ .team-list{
+    list-style: none;
+    padding: 0;
+
+ }
+
+ .team-list li{
+    maring-bottom: 10px;
+ }
