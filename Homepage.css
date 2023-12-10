@@ -59,16 +59,25 @@ footer {
 .social-icons a {
     margin: 10px;
     float: right;
+    
 }
 
 .social-icons img {
     width: 50px;
+    padding-top: 10px;
 
 }
 
 .Meta img {
     width: 120px;
-    height: auto; 
-    float: left;  
+    height: auto;
+   float: left;
+    padding: 20px;
 
+}
+
+.fundi{
+    text-align: center;
+    padding-top: 35px; 
+   
 }
