@@ -8,24 +8,28 @@
 
 </head>
 <body>
-    
-
         <div class="login-continer">
             <h2>Login</h2>
             <form id="loginForm">
                 <label for="Username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="Username">
+                 <div class="error-message" id="UsernameError"></div>
+
 
                 <label for="Password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="Password">
+                 <div class="error-message" id="PasswordError"></div>
 
-                <button type="button" onclick="login()">Login</button>
+
+                <button type="button" onclick="loginForm()">Login</button>
+
+                <p><a href="Register.html">Not register yet?</a></p>
 
             </form> 
         </div>
         <script>
             let UsernameRegex = /^[A-Z][a-z]{3,8}$/;
-            let PasswordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+            let PasswordRegex = /^(?=.*?[A-Z])(?=.*?[a-z]).{8,}$/;
 
             function loginForm(){
                 let UsernameInput = document.getElementById('Username');
@@ -45,7 +49,7 @@
                     return;
                 }
 
-                alert(' succesfully!');
+                alert(' Log in successful!');
             }
 
 

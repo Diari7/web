@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="LogIn.css">
+    
+
+</head>
+<body>
+    <div class="login-continer">
+      <h2>Register</h2>
+      <form id="RegisterForm">
+        <label for="Username">Name:</label>
+        <input type="text" id="Name">
+        <div class="error-message" id="NameError"></div>
+  
+        <label for="Username">Surname:</label>
+        <input type="text" id="Surname">
+        <div class="error-message" id="SurnameError"></div>
+  
+        <label for="Username">Email:</label>
+        <input type="text" id="Email">
+        <div class="error-message" id="EmailError"></div>
+  
+        <label for="Username">Username:</label>
+        <input type="text" id="Username">
+        <div class="error-message" id="UsernameError"></div>
+  
+        <label for="Password">Password</label>
+        <input type="password" id="Password">
+        <div class="error-message" id="PasswordError"></div>
+  
+        <button type="button" onclick="RegisterForm()">Register</button>
+  
+        <p><a href="LogIn.html">Already have an account</a></p>
+      </form>
+    </div>
+    <script>
+      let NameRegex = /^[A-Z][a-z]{3,8}$/;
+      let SurnameRegex = /^[A-Z][a-z]{3,8}$/;
+      let EmailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
+      let UsernameRegex = /^[A-Z][a-z]{3,8}$/;
+      let PasswordRegex = /^(?=.*?[A-Z])(?=.*?[a-z]).{8,}$/;
+  
+      function RegisterForm() {
+        let NameInput = document.getElementById('Name');
+        let NameError = document.getElementById('NameError');
+        let SurnameInput = document.getElementById('Surname'); 
+        let SurnameError = document.getElementById('SurnameError'); 
+        let EmailInput = document.getElementById('Email');
+        let EmailError = document.getElementById('EmailError');
+        let UsernameInput = document.getElementById('Username');
+        let UsernameError = document.getElementById('UsernameError');
+        let PasswordInput = document.getElementById('Password');
+        let PasswordError = document.getElementById('PasswordError');
+  
+        NameError.innerText = '';
+        SurnameError.innerText = '';
+        EmailError.innerText = '';
+        UsernameError.innerText = '';
+        PasswordError.innerText = '';
+  
+        if (!NameRegex.test(NameInput.value)) {
+          NameError.innerText = 'Invalid Name';
+          return;
+        }
+  
+        if (!SurnameRegex.test(SurnameInput.value)) {
+          SurnameError.innerText = 'Invalid Surname';
+          return;
+        }
+        if (!EmailRegex.test(EmailInput.value)) {
+          EmailError.innerText = 'Invalid Email';
+          return;
+        }
+        if (!UsernameRegex.test(UsernameInput.value)) {
+          UsernameError.innerText = 'Invalid Username';
+          return;
+        }
+        if (!PasswordRegex.test(PasswordInput.value)) {
+          PasswordError.innerText = 'Invalid Password';
+          return;
+        }
+  
+        alert('Registered successfully!');
+      }
+    </script>
+  </body>
+</html>
