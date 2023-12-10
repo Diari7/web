@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="LogIn.css">
-    <script src="login.js"></script>
+    
 
 </head>
 <body>
@@ -21,8 +21,36 @@
 
                 <button type="button" onclick="login()">Login</button>
 
-            </form>
+            </form> 
         </div>
-        <script src="script.js"></script>
+        <script>
+            let UsernameRegex = /^[A-Z][a-z]{3,8}$/;
+            let PasswordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+
+            function loginForm(){
+                let UsernameInput = document.getElementById('Username');
+                let UsernameError = document.getElementById('UsernameError');
+                let PasswordInput = document.getElementById('Password');
+                let PasswordError = document.getElementById('PasswordError');
+                
+                UsernameError.innerText = '';
+                PasswordError.innerText = '';
+
+                if(!UsernameRegex.test(UsernameInput.value)){
+                    UsernameError.innerText = 'invalid Userame';
+                    return;
+                }
+                if(!PasswordRegex.test(PasswordInput.value)){
+                    PasswordError.innerText = 'invalid Password';
+                    return;
+                }
+
+                alert(' succesfully!');
+            }
+
+
+
+
+        </script>
 </body>
 </html>
